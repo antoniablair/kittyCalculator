@@ -41,6 +41,9 @@ class ViewController: UIViewController {
         }
     }
     
+    
+    private var brain = CalculatorBrain()
+    
     @IBAction private func performOperation(sender: AnyObject) {
         if let mathematicalSymbol = sender.currentTitle! {
             // do something
@@ -49,11 +52,6 @@ class ViewController: UIViewController {
             }
         }
     }
-
- 
-    var brain = CalculatorBrain()
-    
-    
     
     
     override func viewDidLoad() {
