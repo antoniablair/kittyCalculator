@@ -20,7 +20,6 @@ class ViewController: UIViewController {
     
     @IBAction private func touchNumber(sender: UIButton) {
         let digit = sender.currentTitle!
-        print ("Touch number was called")
         
         if userIsTyping {
             let textCurrentlyInDisplay = calcScreen.text!

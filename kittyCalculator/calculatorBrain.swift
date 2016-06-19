@@ -32,32 +32,40 @@ class CalculatorBrain
     ]
     
     enum Operation {
-        // contains all the different types of operations
-        
+        // contains all the different types of operations.
         // enums are a discreet set of values that are passed by value.
+        // an enum could also contain methods
         // They cannot have storage vars and cannot have inheritance
         case Constant(Double)
         case UnaryOperation(Double -> Double) // The associated value of an UnaryOperation is a function
         case BinaryOperation((Double, Double) -> Double)
         case Equals
-        
-        // an enum could also contain methods
     }
     
     func performOperation(symbol: String) {
         // pull from the dictionary
+        // Note: .Constant = Operation.Constant (Swift can infer this)
+        
         if let operation = operations[symbol] {
             switch operation {
-            // .Constant = Operation.Constant (Swift can infer this)
-            case .Constant(let associatedConstantValue): accumulator = associatedConstantValue
-            case .UnaryOperation(let function): accumulator = function(accumulator)
-            case .BinaryOperation(let function): pending = PendingBinaryOperationInfo(binaryFunction: function, firstOperand: accumulator) // Like multiply or divide (pull from struct)
+            case .Constant(let associatedConstantValue):
+                accumulator = associatedConstantValue
+            case .UnaryOperation(let function):
+                accumulator = function(accumulator)
+            case .BinaryOperation(let function):
+                // also calls equals
+                executePendingBinaryOperation()
+                pending = PendingBinaryOperationInfo(binaryFunction: function, firstOperand: accumulator) // Like multiply or divide (pull from struct)
             case .Equals:
-                if pending != nil {
-                    accumulator = pending!.binaryFunction(pending!.firstOperand, accumulator)
-                    pending = nil
-                }
+                executePendingBinaryOperation()
             }
+        }
+    }
+    
+    private func executePendingBinaryOperation() {
+        if pending != nil {
+            accumulator = pending!.binaryFunction(pending!.firstOperand, accumulator)
+            pending = nil
         }
     }
     
