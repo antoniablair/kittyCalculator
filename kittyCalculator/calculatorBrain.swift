@@ -17,14 +17,17 @@ class CalculatorBrain
         accumulator = operand
     }
     
+    var operations: Dictionary<String, Double> = [
+        "π" : M_PI,
+        "℮" : M_E,
+        "√" : sqrt,
+        "cos" : cos
+    ]
+    
     func performOperation(symbol: String) {
-        print ("Inside switch")
-        switch symbol {
-            case "π": accumulator = M_PI
-            case "√": accumulator = sqrt(accumulator)
-            default: break
+        if let constant = operations[symbol] {
+            accumulator = constant
         }
-        print (accumulator)
     }
     
     
