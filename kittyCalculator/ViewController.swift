@@ -29,6 +29,18 @@ class ViewController: UIViewController {
         userIsTyping = true
     }
     
+    var calcScreenValue: Double {
+        // a computed property to get or set the display value as a double
+        get {
+            // convert string to a double and return the value
+            return Double(calcScreen.text!)!
+        }
+        set {
+            // take the double you set when using displayValue and make it the screen text
+            calcScreen.text = String(newValue)
+        }
+    }
+    
     @IBAction func performOperation(sender: AnyObject) {
         if let mathematicalSymbol = sender.currentTitle! {
             // do something
