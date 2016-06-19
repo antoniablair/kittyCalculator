@@ -43,7 +43,6 @@
                                                         <state key="normal" title="×"/>
                                                         <connections>
                                                             <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jeg-IQ-sCg"/>
-                                                            <action selector="touchNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fGh-Zt-XJH"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bbf-65-FFe">
@@ -52,7 +51,6 @@
                                                         <state key="normal" title="÷"/>
                                                         <connections>
                                                             <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m9r-cG-qLo"/>
-                                                            <action selector="touchNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gv5-Br-5su"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="em7-VB-sgu">
@@ -61,7 +59,6 @@
                                                         <state key="normal" title="+"/>
                                                         <connections>
                                                             <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZTH-LJ-PIx"/>
-                                                            <action selector="touchNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z9e-e4-AfR"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ieK-42-tns">
@@ -70,7 +67,6 @@
                                                         <state key="normal" title="-"/>
                                                         <connections>
                                                             <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1PK-EA-DBM"/>
-                                                            <action selector="touchNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zGH-bc-HnC"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
@@ -84,7 +80,6 @@
                                                         <state key="normal" title="π"/>
                                                         <connections>
                                                             <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lRH-7l-5Hi"/>
-                                                            <action selector="touchNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y2c-D5-11i"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZl-OE-cpC">
@@ -122,7 +117,6 @@
                                                         <state key="normal" title="√"/>
                                                         <connections>
                                                             <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WLR-2H-6aa"/>
-                                                            <action selector="touchNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rVs-Wd-2MM"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ryw-rc-XlV">
@@ -160,7 +154,6 @@
                                                         <state key="normal" title="e"/>
                                                         <connections>
                                                             <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BiJ-pe-bS6"/>
-                                                            <action selector="touchNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FG1-HA-wi2"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQo-Of-WJB">
@@ -198,7 +191,6 @@
                                                         <state key="normal" title="cos"/>
                                                         <connections>
                                                             <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p9Y-2z-P9B"/>
-                                                            <action selector="touchNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ezi-fa-dq0"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aho-ag-poG">

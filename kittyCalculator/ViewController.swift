@@ -13,23 +13,26 @@ class ViewController: UIViewController {
     // MARK: Properties
     
     var userIsTyping = false
+    private var brain = CalculatorBrain()
     
     @IBOutlet private weak var catFace: UIImageView!
     @IBOutlet private weak var calcScreen: UILabel!
+    
     @IBAction private func touchNumber(sender: UIButton) {
         let digit = sender.currentTitle!
+        print ("Touch number was called")
         
         if userIsTyping {
             let textCurrentlyInDisplay = calcScreen.text!
-            calcScreen.text? = textCurrentlyInDisplay + digit
+            calcScreen.text = textCurrentlyInDisplay + digit
         }
         else {
-            calcScreen.text? = digit
+            calcScreen.text = digit
         }
         userIsTyping = true
     }
     
-    private var calcScreenValue: Double {
+    var displayValue: Double {
         // a computed property to get or set the display value as a double
         get {
             // convert string to a double and return the value
@@ -41,16 +44,15 @@ class ViewController: UIViewController {
         }
     }
     
-    
-    private var brain = CalculatorBrain()
-    
-    @IBAction private func performOperation(sender: AnyObject) {
-        if let mathematicalSymbol = sender.currentTitle! {
-            // do something
-            if mathematicalSymbol == "π" {
-                calcScreen.text = String(M_PI) // M_PI
-            }
+    @IBAction private func performOperation(sender: UIButton) {
+        if userIsTyping {
+            brain.setOperand(displayValue)
+            userIsTyping = false
         }
+        if let mathematicalSymbol = sender.currentTitle {
+            brain.performOperation(mathematicalSymbol)
+        }
+        displayValue = brain.result
     }
     
     

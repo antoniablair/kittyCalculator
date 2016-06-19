@@ -8,22 +8,30 @@
 
 import Foundation
 
-class CalculatorBrain {
+class CalculatorBrain
+{
     // API for CalculatorBrain
-    func setOperand(operand: Double) { }
+    private var accumulator = 0.0
     
-    func performOperation(symbol: String) { }
+    func setOperand(operand: Double) {
+        accumulator = operand
+    }
+    
+    func performOperation(symbol: String) {
+        print ("Inside switch")
+        switch symbol {
+            case "π": accumulator = M_PI
+            case "√": accumulator = sqrt(accumulator)
+            default: break
+        }
+        print (accumulator)
+    }
+    
     
     var result: Double {
         // This is a read-only property (doesn't have set)
         get {
-            // TODO: change return 0.0 to return the answer
-            return 0.0
+            return accumulator
         }
-    }
-    
-    init() {
-        print ("calculatorBrain is initialized")
-        
     }
 }
