@@ -41,7 +41,7 @@ class CalculatorBrain
         case BinaryOperation((Double, Double) -> Double)
         case Equals
         
-        // they could also contain methods
+        // an enum could also contain methods
     }
     
     func performOperation(symbol: String) {
@@ -51,16 +51,28 @@ class CalculatorBrain
             // .Constant = Operation.Constant (Swift can infer this)
             case .Constant(let associatedConstantValue): accumulator = associatedConstantValue
             case .UnaryOperation(let function): accumulator = function(accumulator)
-            case .BinaryOperation(let function): break // Like multiply or divide (pull from struct)
-            case .Equals: break
+            case .BinaryOperation(let function): pending = PendingBinaryOperationInfo(binaryFunction: function, firstOperand: accumulator) // Like multiply or divide (pull from struct)
+            case .Equals:
+                if pending != nil {
+                    accumulator = pending!.binaryFunction(pending!.firstOperand, accumulator)
+                    pending = nil
+                }
             }
         }
     }
+    
+    // structs must be instantiated
+    private var pending: PendingBinaryOperationInfo?
+    
+    // structs are almost the same as a class
+    // but like an enum they are passed by value (versus passed by reference, which is what class does)
+    // so when you pass it you copy it (it's not the original)
     
     struct PendingBinaryOperationInfo {
         var binaryFunction: (Double, Double) -> Double
         var firstOperand: Double // This will be the accumulator
     }
+    
     
     
     var result: Double {

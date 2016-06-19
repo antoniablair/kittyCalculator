@@ -215,7 +215,6 @@
                                                         <state key="normal" title="="/>
                                                         <connections>
                                                             <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4XP-Hr-Uhi"/>
-                                                            <action selector="touchNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b0S-87-FMO"/>
                                                         </connections>
                                                     </button>
                                                 </subviews>
