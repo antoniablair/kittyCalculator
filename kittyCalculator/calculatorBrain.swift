@@ -17,10 +17,10 @@ class CalculatorBrain
         accumulator = operand
     }
     
-    // turns a string into an operation from my enum
+    // dictionary uses a string to refer to a case inside my Operation enum
     var operations: Dictionary<String, Operation> = [
-        "π" : Operation.Constant, // M_PI
-        "℮" : Operation.Constant, // M_E,
+        "π" : Operation.Constant(M_PI),
+        "℮" : Operation.Constant(M_E), // M_E,
         "√" : Operation.UnaryOperation, // sqrt,
         "cos" : Operation.UnaryOperation // cos
     ]
@@ -30,7 +30,7 @@ class CalculatorBrain
         
         // enums are a discreet set of values that are passed by value.
         // They cannot have storage vars and cannot have inheritance
-        case Constant
+        case Constant(Double)
         case UnaryOperation
         case BinaryOperation
         case Equals
@@ -39,9 +39,11 @@ class CalculatorBrain
     }
     
     func performOperation(symbol: String) {
+        // pull from the dictionary
         if let operation = operations[symbol] {
             switch operation {
-            case .Constant: break
+            // .Constant = Operation.Constant (Swift can infer this)
+            case .Constant(let associatedConstantValue): accumulator = associatedConstantValue
             case .UnaryOperation: break
             case .BinaryOperation: break
             case .Equals: break
