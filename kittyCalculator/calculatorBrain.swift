@@ -17,12 +17,26 @@ class CalculatorBrain
         accumulator = operand
     }
     
-    var operations: Dictionary<String, Double> = [
-        "π" : M_PI,
-        "℮" : M_E,
-        "√" : sqrt,
-        "cos" : cos
+    // turns a string into an operation from my enum
+    var operations: Dictionary<String, Operation> = [
+        "π" : Operation.Constant, // M_PI
+        "℮" : Operation.Constant, //M_E,
+        "√" : Operation.UnaryOperation, // sqrt,
+        "cos" : Operation.UnaryOperation // cos
     ]
+    
+    enum Operation {
+        // contains all the different types of operations
+        
+        // enums are a discreet set of values that are passed by value.
+        // They cannot have storage vars and cannot have inheritance
+        case Constant
+        case UnaryOperation
+        case BinaryOperation
+        case Equals
+        
+        // they could also contain methods
+    }
     
     func performOperation(symbol: String) {
         if let constant = operations[symbol] {
