@@ -8,6 +8,10 @@
 
 import Foundation
 
+func multiply(op1: Double, op2: Double) -> Double {
+    return op1 * op2
+}
+
 class CalculatorBrain
 {
     // API for CalculatorBrain
@@ -22,7 +26,9 @@ class CalculatorBrain
         "π" : Operation.Constant(M_PI),
         "℮" : Operation.Constant(M_E),
         "√" : Operation.UnaryOperation(sqrt),
-        "cos" : Operation.UnaryOperation(cos)
+        "cos" : Operation.UnaryOperation(cos),
+        "×"  : Operation.BinaryOperation(multiply),
+        "=" : Operation.Equals
     ]
     
     enum Operation {
@@ -32,7 +38,7 @@ class CalculatorBrain
         // They cannot have storage vars and cannot have inheritance
         case Constant(Double)
         case UnaryOperation(Double -> Double) // The associated value of an UnaryOperation is a function
-        case BinaryOperation
+        case BinaryOperation((Double, Double) -> Double)
         case Equals
         
         // they could also contain methods
@@ -45,10 +51,15 @@ class CalculatorBrain
             // .Constant = Operation.Constant (Swift can infer this)
             case .Constant(let associatedConstantValue): accumulator = associatedConstantValue
             case .UnaryOperation(let function): accumulator = function(accumulator)
-            case .BinaryOperation: break // Like multiply or divide
+            case .BinaryOperation(let function): break // Like multiply or divide (pull from struct)
             case .Equals: break
             }
         }
+    }
+    
+    struct PendingBinaryOperationInfo {
+        var binaryFunction: (Double, Double) -> Double
+        var firstOperand: Double // This will be the accumulator
     }
     
     
