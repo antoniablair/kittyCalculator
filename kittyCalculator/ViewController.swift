@@ -51,7 +51,7 @@ class ViewController: UIViewController {
     }
 
  
-    var brain = calculatorBrain()
+    var brain = CalculatorBrain()
     
     
     
