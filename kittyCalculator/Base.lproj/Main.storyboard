@@ -21,7 +21,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EJm-p4-NVH">
                                 <rect key="frame" x="90" y="220" width="420" height="370"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ii2-CL-W4O">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ii2-CL-W4O">
                                         <rect key="frame" x="0.0" y="0.0" width="420" height="50"/>
                                         <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -42,6 +42,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                                         <state key="normal" title="×"/>
                                                         <connections>
+                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jeg-IQ-sCg"/>
                                                             <action selector="touchNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fGh-Zt-XJH"/>
                                                         </connections>
                                                     </button>
@@ -50,6 +51,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                                         <state key="normal" title="÷"/>
                                                         <connections>
+                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m9r-cG-qLo"/>
                                                             <action selector="touchNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gv5-Br-5su"/>
                                                         </connections>
                                                     </button>
@@ -58,6 +60,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                                         <state key="normal" title="+"/>
                                                         <connections>
+                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZTH-LJ-PIx"/>
                                                             <action selector="touchNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z9e-e4-AfR"/>
                                                         </connections>
                                                     </button>
@@ -66,6 +69,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                                         <state key="normal" title="-"/>
                                                         <connections>
+                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1PK-EA-DBM"/>
                                                             <action selector="touchNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zGH-bc-HnC"/>
                                                         </connections>
                                                     </button>
@@ -79,6 +83,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                                         <state key="normal" title="π"/>
                                                         <connections>
+                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lRH-7l-5Hi"/>
                                                             <action selector="touchNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y2c-D5-11i"/>
                                                         </connections>
                                                     </button>
@@ -116,6 +121,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                                         <state key="normal" title="√"/>
                                                         <connections>
+                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WLR-2H-6aa"/>
                                                             <action selector="touchNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rVs-Wd-2MM"/>
                                                         </connections>
                                                     </button>
@@ -153,6 +159,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                                         <state key="normal" title="e"/>
                                                         <connections>
+                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BiJ-pe-bS6"/>
                                                             <action selector="touchNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FG1-HA-wi2"/>
                                                         </connections>
                                                     </button>
@@ -190,6 +197,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                                         <state key="normal" title="cos"/>
                                                         <connections>
+                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p9Y-2z-P9B"/>
                                                             <action selector="touchNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ezi-fa-dq0"/>
                                                         </connections>
                                                     </button>
@@ -214,6 +222,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                                         <state key="normal" title="="/>
                                                         <connections>
+                                                            <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4XP-Hr-Uhi"/>
                                                             <action selector="touchNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="b0S-87-FMO"/>
                                                         </connections>
                                                     </button>

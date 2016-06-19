@@ -21,7 +21,6 @@ class ViewController: UIViewController {
         
         if userIsTyping {
             let textCurrentlyInDisplay = calcScreen.text!
-            print (textCurrentlyInDisplay)
             calcScreen.text? = textCurrentlyInDisplay + digit
         }
         else {
@@ -30,6 +29,16 @@ class ViewController: UIViewController {
         userIsTyping = true
     }
     
+    @IBAction func performOperation(sender: AnyObject) {
+        if let mathematicalSymbol = sender.currentTitle! {
+            // do something
+            if mathematicalSymbol == "π" {
+                calcScreen.text = String(M_PI) // M_PI
+            }
+        }
+    }
+
+ 
     var brain = calculatorBrain()
     
     
