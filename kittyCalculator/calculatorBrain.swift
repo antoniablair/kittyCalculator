@@ -20,7 +20,7 @@ class CalculatorBrain
     // turns a string into an operation from my enum
     var operations: Dictionary<String, Operation> = [
         "π" : Operation.Constant, // M_PI
-        "℮" : Operation.Constant, //M_E,
+        "℮" : Operation.Constant, // M_E,
         "√" : Operation.UnaryOperation, // sqrt,
         "cos" : Operation.UnaryOperation // cos
     ]
@@ -39,8 +39,13 @@ class CalculatorBrain
     }
     
     func performOperation(symbol: String) {
-        if let constant = operations[symbol] {
-            accumulator = constant
+        if let operation = operations[symbol] {
+            switch operation {
+            case .Constant: break
+            case .UnaryOperation: break
+            case .BinaryOperation: break
+            case .Equals: break
+            }
         }
     }
     
