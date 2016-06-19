@@ -14,9 +14,9 @@ class ViewController: UIViewController {
     
     var userIsTyping = false
     
-    @IBOutlet weak var catFace: UIImageView!
-    @IBOutlet weak var calcScreen: UILabel!
-    @IBAction func touchNumber(sender: UIButton) {
+    @IBOutlet private weak var catFace: UIImageView!
+    @IBOutlet private weak var calcScreen: UILabel!
+    @IBAction private func touchNumber(sender: UIButton) {
         let digit = sender.currentTitle!
         
         if userIsTyping {
@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         userIsTyping = true
     }
     
-    var calcScreenValue: Double {
+    private var calcScreenValue: Double {
         // a computed property to get or set the display value as a double
         get {
             // convert string to a double and return the value
@@ -41,7 +41,7 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func performOperation(sender: AnyObject) {
+    @IBAction private func performOperation(sender: AnyObject) {
         if let mathematicalSymbol = sender.currentTitle! {
             // do something
             if mathematicalSymbol == "π" {
