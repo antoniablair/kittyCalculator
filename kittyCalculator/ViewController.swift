@@ -35,7 +35,13 @@ class ViewController: UIViewController {
         // a computed property to get or set the display value as a double
         get {
             // convert string to a double and return the value
-            return Double(calcScreen.text!)!
+            if let value = Double(calcScreen.text!) {
+                return value
+            }
+            else {
+                errorOccured()
+                return 0.0
+            }
         }
         set {
             // take the double you set when using displayValue and make it the screen text
@@ -97,4 +103,9 @@ extension UIColor {
     convenience init(netHex:Int) {
         self.init(red:(netHex >> 16) & 0xff, green:(netHex >> 8) & 0xff, blue:netHex & 0xff)
     }
+}
+
+// Error handling :( 
+func errorOccured() {
+    print ("There was an error!")
 }
