@@ -49,7 +49,7 @@ class CalculatorBrain
         case Equals
     }
     
-    private func performOperation(symbol: String) {
+    func performOperation(symbol: String) {
         // pull from the dictionary
         // Note: .Constant = Operation.Constant (Swift can infer this)
         
