@@ -70,6 +70,7 @@ class CalculatorBrain
                 
             case .Clear:
                 accumulator = 0.0
+                pending = nil
             }
         }
     }
