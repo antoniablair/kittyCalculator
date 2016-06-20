@@ -8,10 +8,6 @@
 
 import Foundation
 
-func multiply(op1: Double, op2: Double) -> Double {
-    return op1 * op2
-}
-
 class CalculatorBrain
 {
     // API for CalculatorBrain
@@ -27,8 +23,17 @@ class CalculatorBrain
         "℮" : Operation.Constant(M_E),
         "√" : Operation.UnaryOperation(sqrt),
         "cos" : Operation.UnaryOperation(cos),
-        "×"  : Operation.BinaryOperation(multiply),
-        "=" : Operation.Equals
+        "±" : Operation.UnaryOperation({ -$0 }),
+        "÷"  : Operation.BinaryOperation({ $0 / $1}),
+        "+"  : Operation.BinaryOperation({ $0 + $1 }),
+        "-"  : Operation.BinaryOperation({ $0 - $1 }),
+        "×"  : Operation.BinaryOperation({ $0 * $1}),
+        "=" : Operation.Equals,
+        // ^^^ this is the same as below:
+        //  "×"  : Operation.BinaryOperation({(op1: Double, op2: Double) -> Double in
+        //      return op1 * op2}),
+        // which is also the same as:
+        // "x" : Operation.BinaryOperation({ (op1, op2) in return op1 * op2 })
     ]
     
     enum Operation {
