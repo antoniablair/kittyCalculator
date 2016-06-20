@@ -18,7 +18,7 @@ class CalculatorBrain
     }
     
     // dictionary uses a string to refer to a case inside my Operation enum
-    var operations: Dictionary<String, Operation> = [
+    private var operations: Dictionary<String, Operation> = [
         "π" : Operation.Constant(M_PI),
         "℮" : Operation.Constant(M_E),
         "√" : Operation.UnaryOperation(sqrt),
@@ -29,12 +29,14 @@ class CalculatorBrain
         "-"  : Operation.BinaryOperation({ $0 - $1 }),
         "×"  : Operation.BinaryOperation({ $0 * $1}),
         "=" : Operation.Equals,
-        // ^^^ this is the same as below:
-        //  "×"  : Operation.BinaryOperation({(op1: Double, op2: Double) -> Double in
-        //      return op1 * op2}),
-        // which is also the same as:
-        // "x" : Operation.BinaryOperation({ (op1, op2) in return op1 * op2 })
     ]
+    
+    // Above, the multiply is the same as:
+    //  "×"  : Operation.BinaryOperation({(op1: Double, op2: Double) -> Double in
+    //      return op1 * op2}),
+    // which is also the same as:
+    // "x" : Operation.BinaryOperation({ (op1, op2) in return op1 * op2 })
+    
     
     enum Operation {
         // contains all the different types of operations.
@@ -47,7 +49,7 @@ class CalculatorBrain
         case Equals
     }
     
-    func performOperation(symbol: String) {
+    private func performOperation(symbol: String) {
         // pull from the dictionary
         // Note: .Constant = Operation.Constant (Swift can infer this)
         
@@ -85,8 +87,6 @@ class CalculatorBrain
         var binaryFunction: (Double, Double) -> Double
         var firstOperand: Double // This will be the accumulator
     }
-    
-    
     
     var result: Double {
         // This is a read-only property (doesn't have set)
