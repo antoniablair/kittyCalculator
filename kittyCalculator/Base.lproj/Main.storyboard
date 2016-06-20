@@ -191,7 +191,6 @@
                                                         <state key="normal" title="clear"/>
                                                         <connections>
                                                             <action selector="performOperation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="p9Y-2z-P9B"/>
-                                                            <action selector="touchClear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="G8L-IW-zfG"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aho-ag-poG">

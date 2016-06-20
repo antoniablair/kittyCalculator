@@ -18,9 +18,6 @@ class ViewController: UIViewController {
     @IBOutlet private weak var catFace: UIImageView!
     @IBOutlet private weak var calcScreen: UILabel!
     
-    @IBAction func touchClear(sender: UIButton) {
-        displayValue = 0
-    }
     @IBAction private func touchNumber(sender: UIButton) {
         let digit = sender.currentTitle!
         

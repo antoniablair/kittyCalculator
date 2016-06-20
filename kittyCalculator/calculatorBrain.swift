@@ -29,6 +29,7 @@ class CalculatorBrain
         "-"  : Operation.BinaryOperation({ $0 - $1 }),
         "×"  : Operation.BinaryOperation({ $0 * $1}),
         "=" : Operation.Equals,
+        "clear" : Operation.Clear,
     ]
     
     // Above, the multiply is the same as:
@@ -47,6 +48,7 @@ class CalculatorBrain
         case UnaryOperation(Double -> Double) // The associated value of an UnaryOperation is a function
         case BinaryOperation((Double, Double) -> Double)
         case Equals
+        case Clear
     }
     
     func performOperation(symbol: String) {
@@ -65,6 +67,9 @@ class CalculatorBrain
                 pending = PendingBinaryOperationInfo(binaryFunction: function, firstOperand: accumulator) // Like multiply or divide (pull from struct)
             case .Equals:
                 executePendingBinaryOperation()
+                
+            case .Clear:
+                accumulator = 0.0
             }
         }
     }
