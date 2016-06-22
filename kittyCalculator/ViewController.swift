@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     var userIsTyping = false
     private var brain = CalculatorBrain()
     
+    @IBOutlet weak var speechBubble: UIImageView!
     @IBOutlet private weak var catFace: UIImageView!
     @IBOutlet private weak var calcScreen: UILabel!
     
@@ -39,7 +40,7 @@ class ViewController: UIViewController {
                 return value
             }
             else {
-                errorOccured()
+                speechBubble.hidden = false
                 return 0.0
             }
         }
@@ -67,6 +68,8 @@ class ViewController: UIViewController {
         
         let background = UIColor(netHex:0x75DBCD)
         self.view.backgroundColor = background
+        
+        speechBubble.hidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -81,7 +84,7 @@ class ViewController: UIViewController {
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
         if UIDevice.currentDevice().orientation.isLandscape.boolValue {
             print("Landscape")
-            catFace.hidden = true
+//            catFace.hidden = true
         } else {
             catFace.hidden = false
             print ("Portrait")
@@ -103,9 +106,4 @@ extension UIColor {
     convenience init(netHex:Int) {
         self.init(red:(netHex >> 16) & 0xff, green:(netHex >> 8) & 0xff, blue:netHex & 0xff)
     }
-}
-
-// Error handling :( 
-func errorOccured() {
-    print ("There was an error!")
 }
