@@ -35,6 +35,8 @@ class ViewController: UIViewController {
     func showSpeechBubble() {
         // TODO: Update to display different error messages depending on type of error received
         speechBubble.hidden = false
+        
+        UIView.animateWithDuration(0.5) { self.speechBubble.transform = CGAffineTransformMakeScale(1,1) }
     }
     
     var displayValue: Double {
@@ -84,37 +86,22 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-//    override func touchesBegan(touches: NSet!, withEvent event: UIEvent!) {
-//        console.log("Touching")
-//    }
-//    
-    
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        let touchCount = touches.count
-        print (touchCount)
         
         if speechBubble.hidden == false {
+//            UIView.animateWithDuration(0.5) { self.speechBubble.transform = CGAffineTransformMakeScale(0,0) }
+            
             print ("Hide speech bubble")
-            UIView.animateWithDuration(1.5, animations: {
-                self.speechBubble.transform = CGAffineTransformMakeScale(0.6,0.6)
+            UIView.animateWithDuration(1.0, animations: {
+                self.speechBubble.transform = CGAffineTransformMakeScale(0.1,0.1)
             },
-            completion: { finish in UIView.animateWithDuration(0.2) {
-                self.speechBubble.hidden = true
-                self.speechBubble.transform = CGAffineTransformMakeScale(1,1)
-            }
-            })
+             completion: { finish in
+                UIView.animateWithDuration(0.6){self.speechBubble.transform = CGAffineTransformIdentity}
+                                       
+//            completion: { finish in UIView.animateWithDuration(1) {
+//                self.speechBubble.transform = CGAffineTransformMakeScale(0,0)
+            }            )
 //            speechBubble.hidden = true
-        }
-        else {
-            speechBubble.hidden = false
-            
-            UIView.animateWithDuration(1.5, animations: {
-                self.speechBubble.transform
-            })
-            
-            UIView.animateWithDuration(1.5, animations: {
-                self.speechBubble.alpha = 1.0
-            })
         }
     }
     
