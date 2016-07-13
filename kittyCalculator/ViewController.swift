@@ -32,6 +32,11 @@ class ViewController: UIViewController {
         userIsTyping = true
     }
     
+    func showSpeechBubble() {
+        // TODO: Update to display different error messages depending on type of error received
+        speechBubble.hidden = false
+    }
+    
     var displayValue: Double {
         // a computed property to get or set the display value as a double
         get {
@@ -40,7 +45,7 @@ class ViewController: UIViewController {
                 return value
             }
             else {
-                speechBubble.hidden = false
+                showSpeechBubble()
                 return 0.0
             }
         }
@@ -61,6 +66,7 @@ class ViewController: UIViewController {
         displayValue = brain.result
     }
     
+    // MARK: viewDidLoad
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,11 +76,46 @@ class ViewController: UIViewController {
         self.view.backgroundColor = background
         
         speechBubble.hidden = true
+        speechBubble.transform = CGAffineTransformMakeScale(0.6,0.6)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+//    override func touchesBegan(touches: NSet!, withEvent event: UIEvent!) {
+//        console.log("Touching")
+//    }
+//    
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        let touchCount = touches.count
+        print (touchCount)
+        
+        if speechBubble.hidden == false {
+            print ("Hide speech bubble")
+            UIView.animateWithDuration(1.5, animations: {
+                self.speechBubble.transform = CGAffineTransformMakeScale(0.6,0.6)
+            },
+            completion: { finish in UIView.animateWithDuration(0.2) {
+                self.speechBubble.hidden = true
+                self.speechBubble.transform = CGAffineTransformMakeScale(1,1)
+            }
+            })
+//            speechBubble.hidden = true
+        }
+        else {
+            speechBubble.hidden = false
+            
+            UIView.animateWithDuration(1.5, animations: {
+                self.speechBubble.transform
+            })
+            
+            UIView.animateWithDuration(1.5, animations: {
+                self.speechBubble.alpha = 1.0
+            })
+        }
     }
     
     // This will tell me if the phone is landscape or portrait (in case cat graphics need
