@@ -88,20 +88,17 @@ class ViewController: UIViewController {
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         
+        // When the speechBubble is visible, hide it when user touches
         if speechBubble.hidden == false {
-//            UIView.animateWithDuration(0.5) { self.speechBubble.transform = CGAffineTransformMakeScale(0,0) }
-            
-            print ("Hide speech bubble")
-            UIView.animateWithDuration(1.0, animations: {
+            UIView.animateWithDuration(0.2, animations: {
                 self.speechBubble.transform = CGAffineTransformMakeScale(0.1,0.1)
             },
-             completion: { finish in
-                UIView.animateWithDuration(0.6){self.speechBubble.transform = CGAffineTransformIdentity}
-                                       
-//            completion: { finish in UIView.animateWithDuration(1) {
-//                self.speechBubble.transform = CGAffineTransformMakeScale(0,0)
-            }            )
-//            speechBubble.hidden = true
+                completion: { finish in
+                    UIView.animateWithDuration(0.6){
+                        self.speechBubble.transform = CGAffineTransformMakeScale(0.5, 0.5)
+                        self.speechBubble.hidden = true
+                }
+            })
         }
     }
     
