@@ -251,7 +251,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Mathtastic" id="T80-Mp-8MK">
-                        <barButtonItem key="rightBarButtonItem" title="&lt;3" id="jTZ-8x-2Pt"/>
+                        <barButtonItem key="rightBarButtonItem" title="Options" id="jTZ-8x-2Pt"/>
                     </navigationItem>
                     <connections>
                         <outlet property="calcScreen" destination="ii2-CL-W4O" id="pN6-mh-C9n"/>

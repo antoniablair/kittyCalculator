@@ -109,7 +109,7 @@ class ViewController: UIViewController {
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
         if UIDevice.currentDevice().orientation.isLandscape.boolValue {
             print("Landscape")
-//            catFace.hidden = true
+            catFace.hidden = true
         } else {
             catFace.hidden = false
             print ("Portrait")
