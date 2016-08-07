@@ -15,7 +15,7 @@ class CalculatorViewController: UIViewController {
     var userIsTyping = false
     private var brain = CalculatorBrain()
     
-    @IBOutlet weak var speechBubble: UIImageView!
+    @IBOutlet private weak var speechBubble: UIImageView!
     @IBOutlet private weak var catFace: UIImageView!
     @IBOutlet private weak var calcScreen: UILabel!
     
@@ -69,8 +69,11 @@ class CalculatorViewController: UIViewController {
     
     //MARK: Navigation
  
-    
-    
+    @IBAction func unwindToCalculator(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.sourceViewController as? ChooseCatViewController {
+            // do something if they save or if they push cancel?
+        }
+    }
     
     // MARK: viewDidLoad
     override func viewDidLoad() {
@@ -130,8 +133,6 @@ class CalculatorViewController: UIViewController {
 }
 
 //MARK: Colors
-
-
 // Convenience init to allow me to use hexcodes for colors
 extension UIColor {
     convenience init(red: Int, green: Int, blue: Int) {
