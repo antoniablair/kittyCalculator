@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CalculatorViewController.swift
 //  kittyCalculator
 //
 //  Created by Antonia Blair on 6/18/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CalculatorViewController: UIViewController {
 
     // MARK: Properties
     
@@ -33,7 +33,6 @@ class ViewController: UIViewController {
     }
     
     func showSpeechBubble() {
-        // TODO: Update to display different error messages depending on type of error received
         speechBubble.hidden = false
         
         UIView.animateWithDuration(0.5) { self.speechBubble.transform = CGAffineTransformMakeScale(1,1) }
@@ -68,8 +67,12 @@ class ViewController: UIViewController {
         displayValue = brain.result
     }
     
-    // MARK: viewDidLoad
+    //MARK: Navigation
+ 
     
+    
+    
+    // MARK: viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -102,6 +105,11 @@ class ViewController: UIViewController {
         }
     }
     
+    //MARK: Device rotation
+//    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+//        return UIInterfaceOrientationMask.Portrait
+//    }
+    
     // This will tell me if the phone is landscape or portrait (in case cat graphics need
     // modification in landscape)
     
@@ -120,6 +128,9 @@ class ViewController: UIViewController {
     }
 
 }
+
+//MARK: Colors
+
 
 // Convenience init to allow me to use hexcodes for colors
 extension UIColor {
