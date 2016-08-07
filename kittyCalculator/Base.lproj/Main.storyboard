@@ -277,7 +277,7 @@
             </objects>
             <point key="canvasLocation" x="1779" y="256"/>
         </scene>
-        <!--Choose a Cat-->
+        <!--Options-->
         <scene sceneID="Kit-EV-wgh">
             <objects>
                 <viewController id="Dlg-IO-b9z" customClass="ChooseCatViewController" customModule="kittyCalculator" customModuleProvider="target" sceneMemberID="viewController">
@@ -289,19 +289,52 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Choose your new cat." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYU-Vk-sig">
-                                <rect key="frame" x="20" y="109" width="560" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Choose a cat." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYU-Vk-sig">
+                                <rect key="frame" x="20" y="180" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Choose a default tip amount." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTY-nl-YAj">
+                                <rect key="frame" x="20" y="87" width="560" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="whitecat" translatesAutoresizingMaskIntoConstraints="NO" id="Nru-2i-shd">
+                                <rect key="frame" x="105" y="264" width="125" height="98"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grumpycat" translatesAutoresizingMaskIntoConstraints="NO" id="AYF-1y-cKT">
+                                <rect key="frame" x="244" y="264" width="125" height="98"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stripescat" translatesAutoresizingMaskIntoConstraints="NO" id="wp9-TZ-aVO">
+                                <rect key="frame" x="105" y="401" width="125" height="98"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="siamesecat" translatesAutoresizingMaskIntoConstraints="NO" id="b0W-8o-idP">
+                                <rect key="frame" x="244" y="401" width="125" height="98"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blackcat" translatesAutoresizingMaskIntoConstraints="NO" id="vnz-Kq-zcD">
+                                <rect key="frame" x="382" y="264" width="125" height="98"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stripescat" translatesAutoresizingMaskIntoConstraints="NO" id="Kgz-I8-OWm">
+                                <rect key="frame" x="382" y="401" width="125" height="98"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="20%" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AMj-Nf-nGE">
+                                <rect key="frame" x="244" y="130" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="AMj-Nf-nGE" firstAttribute="centerX" secondItem="DV0-ZU-zzW" secondAttribute="centerX" id="1C3-f2-A5k"/>
+                            <constraint firstItem="KTY-nl-YAj" firstAttribute="centerX" secondItem="DV0-ZU-zzW" secondAttribute="centerX" id="3DL-rQ-ezj"/>
+                            <constraint firstItem="KTY-nl-YAj" firstAttribute="centerX" secondItem="DV0-ZU-zzW" secondAttribute="centerX" id="I5U-aV-GGW"/>
                             <constraint firstItem="mYU-Vk-sig" firstAttribute="centerX" secondItem="DV0-ZU-zzW" secondAttribute="centerX" id="dhV-ew-ezJ"/>
+                            <constraint firstItem="mYU-Vk-sig" firstAttribute="centerX" secondItem="DV0-ZU-zzW" secondAttribute="centerX" id="hso-1S-Mhu"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Choose a Cat" id="geI-fs-o8b">
+                    <navigationItem key="navigationItem" title="Options" id="geI-fs-o8b">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="5Me-zG-KbZ">
                             <connections>
                                 <segue destination="LsB-uM-bf8" kind="unwind" unwindAction="unwindToCalculator:" id="cgD-5E-y2s"/>
@@ -363,7 +396,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="blackcat" width="328" height="300"/>
+        <image name="grumpycat" width="328" height="300"/>
+        <image name="siamesecat" width="328" height="300"/>
         <image name="speechBubble" width="417" height="411"/>
+        <image name="stripescat" width="328" height="300"/>
         <image name="whitecat" width="328" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
