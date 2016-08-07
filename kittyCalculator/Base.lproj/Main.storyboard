@@ -301,37 +301,62 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="whitecat" translatesAutoresizingMaskIntoConstraints="NO" id="Nru-2i-shd">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="whitecat" translatesAutoresizingMaskIntoConstraints="NO" id="Nru-2i-shd">
                                 <rect key="frame" x="105" y="264" width="125" height="98"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="1VQ-Du-lCv"/>
+                                    <constraint firstAttribute="height" constant="98" id="dqg-BJ-Nug"/>
+                                </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="grumpycat" translatesAutoresizingMaskIntoConstraints="NO" id="AYF-1y-cKT">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="grumpycat" translatesAutoresizingMaskIntoConstraints="NO" id="AYF-1y-cKT">
                                 <rect key="frame" x="244" y="264" width="125" height="98"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stripescat" translatesAutoresizingMaskIntoConstraints="NO" id="wp9-TZ-aVO">
-                                <rect key="frame" x="105" y="401" width="125" height="98"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="siamesecat" translatesAutoresizingMaskIntoConstraints="NO" id="b0W-8o-idP">
-                                <rect key="frame" x="244" y="401" width="125" height="98"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="blackcat" translatesAutoresizingMaskIntoConstraints="NO" id="vnz-Kq-zcD">
-                                <rect key="frame" x="382" y="264" width="125" height="98"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="stripescat" translatesAutoresizingMaskIntoConstraints="NO" id="Kgz-I8-OWm">
-                                <rect key="frame" x="382" y="401" width="125" height="98"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="20%" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AMj-Nf-nGE">
                                 <rect key="frame" x="244" y="130" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="siamesecat" translatesAutoresizingMaskIntoConstraints="NO" id="tA6-wr-MZH">
+                                <rect key="frame" x="105" y="401" width="125" height="98"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="98" id="0aX-ur-agn"/>
+                                    <constraint firstAttribute="width" constant="125" id="5rX-vu-TNb"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="blackcat" translatesAutoresizingMaskIntoConstraints="NO" id="Oyp-Z0-uud">
+                                <rect key="frame" x="244" y="401" width="125" height="98"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="stripescat" translatesAutoresizingMaskIntoConstraints="NO" id="kcR-S2-CPF">
+                                <rect key="frame" x="382" y="401" width="125" height="98"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="spotscat" translatesAutoresizingMaskIntoConstraints="NO" id="vnz-Kq-zcD">
+                                <rect key="frame" x="382" y="264" width="125" height="98"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="tA6-wr-MZH" firstAttribute="height" secondItem="Oyp-Z0-uud" secondAttribute="height" id="0FA-1w-23V"/>
                             <constraint firstItem="AMj-Nf-nGE" firstAttribute="centerX" secondItem="DV0-ZU-zzW" secondAttribute="centerX" id="1C3-f2-A5k"/>
+                            <constraint firstItem="vnz-Kq-zcD" firstAttribute="height" secondItem="AYF-1y-cKT" secondAttribute="height" id="2CM-yK-xuy"/>
                             <constraint firstItem="KTY-nl-YAj" firstAttribute="centerX" secondItem="DV0-ZU-zzW" secondAttribute="centerX" id="3DL-rQ-ezj"/>
+                            <constraint firstItem="AYF-1y-cKT" firstAttribute="leading" secondItem="Nru-2i-shd" secondAttribute="trailing" constant="14" id="6Da-At-Tj9"/>
+                            <constraint firstItem="kcR-S2-CPF" firstAttribute="leading" secondItem="Oyp-Z0-uud" secondAttribute="trailing" constant="13" id="Hv1-Jm-cpP"/>
                             <constraint firstItem="KTY-nl-YAj" firstAttribute="centerX" secondItem="DV0-ZU-zzW" secondAttribute="centerX" id="I5U-aV-GGW"/>
+                            <constraint firstItem="kcR-S2-CPF" firstAttribute="width" secondItem="Oyp-Z0-uud" secondAttribute="width" id="MmQ-3F-2zi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vnz-Kq-zcD" secondAttribute="trailing" constant="10" id="PcL-OC-uU6"/>
+                            <constraint firstItem="Oyp-Z0-uud" firstAttribute="leading" secondItem="tA6-wr-MZH" secondAttribute="trailing" constant="14" id="Pyf-mi-5rr"/>
+                            <constraint firstItem="vnz-Kq-zcD" firstAttribute="width" secondItem="AYF-1y-cKT" secondAttribute="width" id="Q07-5s-b5Q"/>
+                            <constraint firstItem="Nru-2i-shd" firstAttribute="leading" secondItem="DV0-ZU-zzW" secondAttribute="leadingMargin" constant="10" id="W6Q-VF-XrQ"/>
                             <constraint firstItem="mYU-Vk-sig" firstAttribute="centerX" secondItem="DV0-ZU-zzW" secondAttribute="centerX" id="dhV-ew-ezJ"/>
+                            <constraint firstItem="Nru-2i-shd" firstAttribute="width" secondItem="AYF-1y-cKT" secondAttribute="width" id="fMW-gV-SjP"/>
+                            <constraint firstItem="tA6-wr-MZH" firstAttribute="width" secondItem="Oyp-Z0-uud" secondAttribute="width" id="fVc-wz-Cb7"/>
+                            <constraint firstItem="kcR-S2-CPF" firstAttribute="height" secondItem="Oyp-Z0-uud" secondAttribute="height" id="g75-bc-XIW"/>
                             <constraint firstItem="mYU-Vk-sig" firstAttribute="centerX" secondItem="DV0-ZU-zzW" secondAttribute="centerX" id="hso-1S-Mhu"/>
+                            <constraint firstItem="Nru-2i-shd" firstAttribute="height" secondItem="AYF-1y-cKT" secondAttribute="height" id="igY-U0-saz"/>
+                            <constraint firstItem="Oyp-Z0-uud" firstAttribute="top" secondItem="AYF-1y-cKT" secondAttribute="bottom" constant="39" id="jKb-vK-Gjh"/>
+                            <constraint firstItem="vnz-Kq-zcD" firstAttribute="leading" secondItem="AYF-1y-cKT" secondAttribute="trailing" constant="13" id="mCy-vD-bBb"/>
+                            <constraint firstItem="tA6-wr-MZH" firstAttribute="leading" secondItem="DV0-ZU-zzW" secondAttribute="leadingMargin" constant="10" id="man-jz-Nin"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kcR-S2-CPF" secondAttribute="trailing" constant="10" id="okn-tu-YrD"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Options" id="geI-fs-o8b">
@@ -400,6 +425,7 @@
         <image name="grumpycat" width="328" height="300"/>
         <image name="siamesecat" width="328" height="300"/>
         <image name="speechBubble" width="417" height="411"/>
+        <image name="spotscat" width="328" height="300"/>
         <image name="stripescat" width="328" height="300"/>
         <image name="whitecat" width="328" height="300"/>
     </resources>
