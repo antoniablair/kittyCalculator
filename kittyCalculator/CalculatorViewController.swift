@@ -20,6 +20,8 @@ class CalculatorViewController: UIViewController {
     @IBOutlet private weak var catFace: UIImageView!
     @IBOutlet private weak var calcScreen: UILabel!
     
+    @IBOutlet var calcButtons: [UIButton]!
+
     @IBAction private func touchNumber(sender: UIButton) {
         let digit = sender.currentTitle!
         
@@ -87,6 +89,9 @@ class CalculatorViewController: UIViewController {
         speechBubble.hidden = true
         speechBubble.transform = CGAffineTransformMakeScale(0.6,0.6)
         
+        for button in self.calcButtons {
+            button.layer.cornerRadius = 5
+        }
         
     }
 
