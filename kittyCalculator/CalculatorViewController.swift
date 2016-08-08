@@ -13,6 +13,7 @@ class CalculatorViewController: UIViewController {
     // MARK: Properties
     
     var userIsTyping = false
+    var choices: Choices?
     private var brain = CalculatorBrain()
     
     @IBOutlet private weak var speechBubble: UIImageView!
