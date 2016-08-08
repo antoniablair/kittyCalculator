@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		81D63A361D57DED1000905CE /* ChooseCatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D63A351D57DED1000905CE /* ChooseCatViewController.swift */; };
+		81D63A381D582F70000905CE /* userChoices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D63A371D582F70000905CE /* userChoices.swift */; };
 		81F62AE01D15E41100B1F7B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F62ADF1D15E41100B1F7B5 /* AppDelegate.swift */; };
 		81F62AE21D15E41100B1F7B5 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F62AE11D15E41100B1F7B5 /* CalculatorViewController.swift */; };
 		81F62AE51D15E41100B1F7B5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81F62AE31D15E41100B1F7B5 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		81D63A351D57DED1000905CE /* ChooseCatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseCatViewController.swift; sourceTree = "<group>"; };
+		81D63A371D582F70000905CE /* userChoices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = userChoices.swift; sourceTree = "<group>"; };
 		81F62ADC1D15E41100B1F7B5 /* kittyCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kittyCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81F62ADF1D15E41100B1F7B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81F62AE11D15E41100B1F7B5 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				81F62AE81D15E41100B1F7B5 /* LaunchScreen.storyboard */,
 				81F62AEB1D15E41100B1F7B5 /* Info.plist */,
 				81F62AFF1D163C4100B1F7B5 /* calculatorBrain.swift */,
+				81D63A371D582F70000905CE /* userChoices.swift */,
 			);
 			path = kittyCalculator;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				81D63A361D57DED1000905CE /* ChooseCatViewController.swift in Sources */,
 				81F62B001D163C4100B1F7B5 /* calculatorBrain.swift in Sources */,
 				81F62AE21D15E41100B1F7B5 /* CalculatorViewController.swift in Sources */,
+				81D63A381D582F70000905CE /* userChoices.swift in Sources */,
 				81F62AE01D15E41100B1F7B5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

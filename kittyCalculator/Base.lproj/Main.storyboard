@@ -329,6 +329,14 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="stripescat" translatesAutoresizingMaskIntoConstraints="NO" id="kcR-S2-CPF">
                                 <rect key="frame" x="382" y="401" width="125" height="98"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="heart" translatesAutoresizingMaskIntoConstraints="NO" id="zQA-rB-pNd">
+                                <rect key="frame" x="289" y="226" width="22" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="22" id="OVa-fS-pIa"/>
+                                    <constraint firstAttribute="height" constant="21" id="TIG-dv-Nkj"/>
+                                    <constraint firstAttribute="width" constant="22" id="gBc-A6-60x"/>
+                                </constraints>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="spotscat" translatesAutoresizingMaskIntoConstraints="NO" id="vnz-Kq-zcD">
                                 <rect key="frame" x="382" y="264" width="125" height="98"/>
                             </imageView>
@@ -346,7 +354,10 @@
                             <constraint firstAttribute="trailingMargin" secondItem="vnz-Kq-zcD" secondAttribute="trailing" constant="10" id="PcL-OC-uU6"/>
                             <constraint firstItem="Oyp-Z0-uud" firstAttribute="leading" secondItem="tA6-wr-MZH" secondAttribute="trailing" constant="14" id="Pyf-mi-5rr"/>
                             <constraint firstItem="vnz-Kq-zcD" firstAttribute="width" secondItem="AYF-1y-cKT" secondAttribute="width" id="Q07-5s-b5Q"/>
+                            <constraint firstItem="zQA-rB-pNd" firstAttribute="centerX" secondItem="DV0-ZU-zzW" secondAttribute="centerX" id="QkR-KA-Zbg"/>
+                            <constraint firstItem="AYF-1y-cKT" firstAttribute="top" secondItem="zQA-rB-pNd" secondAttribute="bottom" constant="17" id="RSW-ZI-bek"/>
                             <constraint firstItem="Nru-2i-shd" firstAttribute="leading" secondItem="DV0-ZU-zzW" secondAttribute="leadingMargin" constant="10" id="W6Q-VF-XrQ"/>
+                            <constraint firstItem="zQA-rB-pNd" firstAttribute="top" secondItem="mYU-Vk-sig" secondAttribute="bottom" constant="16" id="WIE-x1-vvZ"/>
                             <constraint firstItem="mYU-Vk-sig" firstAttribute="centerX" secondItem="DV0-ZU-zzW" secondAttribute="centerX" id="dhV-ew-ezJ"/>
                             <constraint firstItem="Nru-2i-shd" firstAttribute="width" secondItem="AYF-1y-cKT" secondAttribute="width" id="fMW-gV-SjP"/>
                             <constraint firstItem="tA6-wr-MZH" firstAttribute="width" secondItem="Oyp-Z0-uud" secondAttribute="width" id="fVc-wz-Cb7"/>
@@ -372,8 +383,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="blackCat" destination="Oyp-Z0-uud" id="J6q-B0-bt1"/>
                         <outlet property="cancelCatChoice" destination="5Me-zG-KbZ" id="kAD-vY-gaB"/>
+                        <outlet property="grumpyCat" destination="AYF-1y-cKT" id="wRP-KV-UzQ"/>
                         <outlet property="saveCatChoice" destination="xE1-CY-wiG" id="fNk-sL-lMJ"/>
+                        <outlet property="siameseCat" destination="tA6-wr-MZH" id="IEt-b7-0QX"/>
+                        <outlet property="spotsCat" destination="vnz-Kq-zcD" id="oFY-on-VrC"/>
+                        <outlet property="stripedCat" destination="kcR-S2-CPF" id="mss-y1-NSS"/>
+                        <outlet property="whiteCat" destination="Nru-2i-shd" id="o9J-Mf-wUb"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="showCalculator" id="Mna-Dm-dvR"/>
                     </connections>
                 </viewController>
@@ -423,6 +440,7 @@
     <resources>
         <image name="blackcat" width="328" height="300"/>
         <image name="grumpycat" width="328" height="300"/>
+        <image name="heart" width="600" height="600"/>
         <image name="siamesecat" width="328" height="300"/>
         <image name="speechBubble" width="417" height="411"/>
         <image name="spotscat" width="328" height="300"/>

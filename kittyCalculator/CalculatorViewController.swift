@@ -85,6 +85,8 @@ class CalculatorViewController: UIViewController {
         
         speechBubble.hidden = true
         speechBubble.transform = CGAffineTransformMakeScale(0.6,0.6)
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
