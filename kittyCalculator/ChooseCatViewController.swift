@@ -13,7 +13,6 @@ class ChooseCatViewController: UIViewController {
     // MARK: Properties
     
     @IBOutlet weak var cancelCatChoice: UIBarButtonItem!
-    
     @IBOutlet weak var saveCatChoice: UIBarButtonItem!
     
     @IBOutlet weak var whiteCat: UIImageView!
@@ -56,5 +55,3 @@ class ChooseCatViewController: UIViewController {
     }
 }
 
-//MARK: Colors
-// Convenience init to allow me to use hexcodes for colors
