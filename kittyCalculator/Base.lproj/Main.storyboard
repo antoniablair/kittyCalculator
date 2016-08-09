@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Mathtastic-->
+        <!--Calculator View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="CalculatorViewController" customModule="kittyCalculator" customModuleProvider="target" sceneMemberID="viewController">
@@ -242,18 +242,18 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" placeholderIntrinsicWidth="117" placeholderIntrinsicHeight="116" image="speechBubble" translatesAutoresizingMaskIntoConstraints="NO" id="lD8-zF-71e">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="117" placeholderIntrinsicHeight="116" image="speechBubble" translatesAutoresizingMaskIntoConstraints="NO" id="lD8-zF-71e">
                                 <rect key="frame" x="80" y="220" width="117" height="116"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="116" id="CN4-NF-Q3T"/>
                                     <constraint firstAttribute="width" constant="117" id="ObV-Fb-cu7"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" misplaced="YES" image="whitecat" translatesAutoresizingMaskIntoConstraints="NO" id="JmC-gV-UZM">
-                                <rect key="frame" x="200" y="72" width="200" height="150"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" ambiguous="YES" misplaced="YES" image="whitecat" translatesAutoresizingMaskIntoConstraints="NO" id="JmC-gV-UZM">
+                                <rect key="frame" x="200" y="44" width="200" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="KWs-B8-CLh"/>
-                                    <constraint firstAttribute="height" constant="150" id="tjA-6c-GtY"/>
+                                    <constraint firstAttribute="height" constant="160" id="tjA-6c-GtY"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -265,10 +265,10 @@
                             <constraint firstAttribute="trailingMargin" secondItem="JmC-gV-UZM" secondAttribute="trailing" constant="45" id="83u-Xh-WnJ"/>
                             <constraint firstItem="lD8-zF-71e" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="60" id="9tn-0P-dHV"/>
                             <constraint firstItem="JmC-gV-UZM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hmg-Pj-ynL"/>
-                            <constraint firstItem="ii2-CL-W4O" firstAttribute="top" secondItem="JmC-gV-UZM" secondAttribute="bottom" constant="15" id="Lwr-Jv-MYO"/>
+                            <constraint firstItem="ii2-CL-W4O" firstAttribute="top" relation="greaterThanOrEqual" secondItem="JmC-gV-UZM" secondAttribute="bottom" constant="15" id="Lwr-Jv-MYO"/>
                             <constraint firstItem="EJm-p4-NVH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="200" id="NkY-zx-ggi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="EJm-p4-NVH" secondAttribute="trailing" constant="40" id="U2M-65-Inc"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mFa-KU-T5I" secondAttribute="bottom" constant="20" id="UPm-xn-Zfc"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="mFa-KU-T5I" secondAttribute="bottom" constant="30" id="UPm-xn-Zfc"/>
                             <constraint firstItem="lD8-zF-71e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ucq-Ob-hdg"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="EJm-p4-NVH" secondAttribute="bottom" id="ZwP-M2-UWM"/>
                         </constraints>
@@ -280,7 +280,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="Mathtastic" id="T80-Mp-8MK">
+                    <navigationItem key="navigationItem" id="T80-Mp-8MK">
                         <barButtonItem key="leftBarButtonItem" title="Options" id="HwR-AB-2hk">
                             <connections>
                                 <segue destination="2zU-zO-5pY" kind="show" identifier="chooseCat" id="WtJ-37-t7k"/>
@@ -332,22 +332,15 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Choose a cat." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYU-Vk-sig">
                                 <rect key="frame" x="20" y="180" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Choose a default tip amount." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTY-nl-YAj">
                                 <rect key="frame" x="20" y="87" width="560" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="whitecat" translatesAutoresizingMaskIntoConstraints="NO" id="Nru-2i-shd">
-                                <rect key="frame" x="105" y="264" width="125" height="98"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="125" id="1VQ-Du-lCv"/>
-                                    <constraint firstAttribute="height" constant="98" id="dqg-BJ-Nug"/>
-                                </constraints>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="grumpycat" translatesAutoresizingMaskIntoConstraints="NO" id="AYF-1y-cKT">
                                 <rect key="frame" x="244" y="264" width="125" height="98"/>
                             </imageView>
@@ -375,9 +368,16 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Byt-BD-Rmb">
                                 <rect key="frame" x="327" y="130" width="22" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="whitecat" translatesAutoresizingMaskIntoConstraints="NO" id="Nru-2i-shd">
+                                <rect key="frame" x="105" y="264" width="125" height="98"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="1VQ-Du-lCv"/>
+                                    <constraint firstAttribute="height" constant="98" id="dqg-BJ-Nug"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -458,7 +458,6 @@
         <!--Navigation Controller-->
         <scene sceneID="2Wq-ml-xTL">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XGP-dD-Bx1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2zU-zO-5pY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="50x-nA-Ang">
@@ -470,6 +469,7 @@
                         <segue destination="Dlg-IO-b9z" kind="relationship" relationship="rootViewController" id="Bkn-1v-pP3"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XGP-dD-Bx1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2588" y="256"/>
         </scene>
