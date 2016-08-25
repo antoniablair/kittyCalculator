@@ -281,9 +281,9 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="T80-Mp-8MK">
-                        <barButtonItem key="leftBarButtonItem" title="Options" id="HwR-AB-2hk">
+                        <barButtonItem key="leftBarButtonItem" title="Menu" id="HwR-AB-2hk">
                             <connections>
-                                <segue destination="Dlg-IO-b9z" kind="show" identifier="chooseCat" id="TL1-RV-eam"/>
+                                <action selector="touchMenuBtn:" destination="BYZ-38-t0r" id="F0L-Gh-Vhc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -311,11 +311,12 @@
                         <outletCollection property="calcButtons" destination="aPF-Vz-FNt" collectionClass="NSMutableArray" id="JRC-3o-IBD"/>
                         <outletCollection property="calcButtons" destination="aho-ag-poG" collectionClass="NSMutableArray" id="O8c-7G-cnA"/>
                         <outletCollection property="calcButtons" destination="LHf-ir-L4r" collectionClass="NSMutableArray" id="BhZ-fg-AB5"/>
+                        <segue destination="pyO-0d-CWl" kind="custom" identifier="idMenuSegue" customClass="MenuSegue" customModule="kittyCalculator" customModuleProvider="target" id="yWa-2d-fwq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1703" y="-80"/>
+            <point key="canvasLocation" x="1930" y="-80"/>
         </scene>
         <!--Options-->
         <scene sceneID="Kit-EV-wgh">
@@ -452,7 +453,59 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zZQ-wj-e45" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="935" y="-80"/>
+            <point key="canvasLocation" x="1930" y="-908"/>
+        </scene>
+        <!--Options Menu View Controller-->
+        <scene sceneID="TPi-s5-Xk6">
+            <objects>
+                <tableViewController id="pyO-0d-CWl" customClass="OptionsMenuViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="134" sectionHeaderHeight="28" sectionFooterHeight="28" id="0U7-Tp-EFU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" red="1" green="0.56688340116174496" blue="0.80112206375838924" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="134" id="2x0-bE-feS" customClass="MenuViewCell" customModule="kittyCalculator" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="134"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2x0-bE-feS" id="FBp-CP-GOh">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="133"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AmK-zw-uED">
+                                            <rect key="frame" x="0.0" y="0.0" width="606" height="133"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Menu Item" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPP-d8-dUQ">
+                                                    <rect key="frame" x="185" y="23" width="254" height="87"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="OPP-d8-dUQ" firstAttribute="centerY" secondItem="AmK-zw-uED" secondAttribute="centerY" id="L6a-IS-UUg"/>
+                                                <constraint firstItem="OPP-d8-dUQ" firstAttribute="centerX" secondItem="AmK-zw-uED" secondAttribute="centerX" id="S9u-CQ-GE3"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="menuItemLink" destination="AmK-zw-uED" id="8VI-j7-7EG"/>
+                                    <outlet property="menuItemName" destination="OPP-d8-dUQ" id="f08-K6-S0f"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="pyO-0d-CWl" id="XlP-4r-aN5"/>
+                            <outlet property="delegate" destination="pyO-0d-CWl" id="dBg-Q7-jR5"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="ZTu-dY-e6w"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NPl-mu-lsJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1930" y="691"/>
         </scene>
     </scenes>
     <resources>

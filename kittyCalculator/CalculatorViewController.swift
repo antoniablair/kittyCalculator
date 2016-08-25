@@ -11,7 +11,6 @@ import UIKit
 class CalculatorViewController: UIViewController {
 
     // MARK: Properties
-    
     var userIsTyping = false
     var choices: Choices?
     private var brain = CalculatorBrain()
@@ -20,6 +19,9 @@ class CalculatorViewController: UIViewController {
     @IBOutlet private weak var catFace: UIImageView!
     @IBOutlet private weak var calcScreen: UILabel!
     
+    @IBAction func touchMenuBtn(sender: AnyObject) {
+        self.performSegueWithIdentifier("idMenuSegue", sender: self)
+    }
     @IBOutlet var calcButtons: [UIButton]!
 
     @IBAction private func touchNumber(sender: UIButton) {
@@ -71,7 +73,7 @@ class CalculatorViewController: UIViewController {
     }
     
     //MARK: Navigation
- 
+    //Todo: Add something here
     @IBAction func unwindToCalculator(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.sourceViewController as? ChooseCatViewController {
             // do something if they save or if they push cancel?
