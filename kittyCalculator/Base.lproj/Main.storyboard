@@ -18,6 +18,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="117" placeholderIntrinsicHeight="116" image="speechBubble" translatesAutoresizingMaskIntoConstraints="NO" id="lD8-zF-71e">
+                                <rect key="frame" x="80" y="220" width="117" height="116"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="116" id="CN4-NF-Q3T"/>
+                                    <constraint firstAttribute="width" constant="117" id="ObV-Fb-cu7"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" ambiguous="YES" misplaced="YES" image="whitecat" translatesAutoresizingMaskIntoConstraints="NO" id="JmC-gV-UZM">
+                                <rect key="frame" x="200" y="44" width="200" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="KWs-B8-CLh"/>
+                                    <constraint firstAttribute="height" constant="160" id="tjA-6c-GtY"/>
+                                </constraints>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="EJm-p4-NVH">
                                 <rect key="frame" x="60" y="244" width="480" height="336"/>
                                 <subviews>
@@ -242,20 +256,6 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" placeholderIntrinsicWidth="117" placeholderIntrinsicHeight="116" image="speechBubble" translatesAutoresizingMaskIntoConstraints="NO" id="lD8-zF-71e">
-                                <rect key="frame" x="80" y="220" width="117" height="116"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="116" id="CN4-NF-Q3T"/>
-                                    <constraint firstAttribute="width" constant="117" id="ObV-Fb-cu7"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" verticalHuggingPriority="252" ambiguous="YES" misplaced="YES" image="whitecat" translatesAutoresizingMaskIntoConstraints="NO" id="JmC-gV-UZM">
-                                <rect key="frame" x="200" y="44" width="200" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="KWs-B8-CLh"/>
-                                    <constraint firstAttribute="height" constant="160" id="tjA-6c-GtY"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -283,7 +283,7 @@
                     <navigationItem key="navigationItem" id="T80-Mp-8MK">
                         <barButtonItem key="leftBarButtonItem" title="Options" id="HwR-AB-2hk">
                             <connections>
-                                <segue destination="2zU-zO-5pY" kind="show" identifier="chooseCat" id="WtJ-37-t7k"/>
+                                <segue destination="Dlg-IO-b9z" kind="show" identifier="chooseCat" id="TL1-RV-eam"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -315,7 +315,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1779" y="256"/>
+            <point key="canvasLocation" x="1703" y="-80"/>
         </scene>
         <!--Options-->
         <scene sceneID="Kit-EV-wgh">
@@ -428,13 +428,12 @@
                         <outlet property="spotsCat" destination="vnz-Kq-zcD" id="oFY-on-VrC"/>
                         <outlet property="stripedCat" destination="kcR-S2-CPF" id="mss-y1-NSS"/>
                         <outlet property="whiteCat" destination="Nru-2i-shd" id="o9J-Mf-wUb"/>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="showCalculator" id="Mna-Dm-dvR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kde-Cy-myt" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="LsB-uM-bf8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3308" y="-532"/>
+            <point key="canvasLocation" x="2710" y="-80"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gJo-O0-NbG">
@@ -453,25 +452,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zZQ-wj-e45" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="923" y="256"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="2Wq-ml-xTL">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="2zU-zO-5pY" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="50x-nA-Ang">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Dlg-IO-b9z" kind="relationship" relationship="rootViewController" id="Bkn-1v-pP3"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="XGP-dD-Bx1" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2588" y="256"/>
+            <point key="canvasLocation" x="935" y="-80"/>
         </scene>
     </scenes>
     <resources>
@@ -484,7 +465,4 @@
         <image name="stripescat" width="328" height="300"/>
         <image name="whitecat" width="328" height="300"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="Mna-Dm-dvR"/>
-    </inferredMetricsTieBreakers>
 </document>
